@@ -7,15 +7,26 @@ const Header = () => {
 
   return (
     <header
-      className={`p-4 bg-white text-black dark:bg-red-800 dark:text-white`}
+      className={`flex justify-between p-4 bg-white text-black dark:bg-red-800 dark:text-white`}
     >
-      <h1 className="text-xl">Header</h1>
-      <button
-        onClick={toggleTheme}
-        className={`mt-2 p-2 rounded bg-gray-200 text-black dark:bg-gray-600 dark:text-white transition-colors duration-300`}
-      >
-        Switch to {isDarkMode ? "Light" : "Dark"} Mode
-      </button>
+      <div>
+        {" "}
+        <h1 className="text-xl">Header</h1>
+      </div>
+      <div className="flex">
+        <div className="home">Home</div>
+        <div className="home">Home</div>
+        <div className="home">Home</div>
+        <div className="home">Home</div>
+      </div>
+      <div>
+        <button
+          onClick={toggleTheme}
+          className={` bg-gray-200 text-black dark:bg-gray-600 dark:text-white`}
+        >
+          {isDarkMode ? "Light" : "Dark"}
+        </button>
+      </div>
     </header>
   );
 };
