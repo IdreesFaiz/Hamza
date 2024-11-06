@@ -5,7 +5,7 @@ const FrontPage = () => {
   return (
     <>
       <div
-        className={` bg-gray-200 text-black dark:bg-gray-600 dark:text-white w-full h-[89vh]
+        className={` bg-gray-200 text-black dark:bg-gray-600 dark:text-white w-full h-[90vh]
             flex justify-between`}
       >
         <div className="section-1  w-1/2 ">
