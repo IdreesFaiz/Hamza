@@ -4,9 +4,26 @@ import Vivo from "./assets/vivo.svg";
 import Oppo from "./assets/oppo.svg";
 import Redmi from "./assets/xiaomi.svg";
 import Realme from "./assets/realme.svg";
-
 import Deliver from "./assets/delivery.png";
+import FrontImg from "./assets/frontImg.png";
+import Watch from "./assets/product.png";
 
+export const Front_Img = FrontImg;
+
+export const FRONT_CIRCLE = [
+  {
+    img: Watch,
+  },
+  {
+    img: Watch,
+  },
+  {
+    img: Watch,
+  },
+  {
+    img: Watch,
+  },
+];
 export const SATISFY_DATA = [
   {
     icon: Deliver,
@@ -46,11 +63,9 @@ export const BRAND_DATA = [
     icon: Redmi,
     tag: "Xiaomi",
   },
- 
-  {
 
-    icon:  Realme,
+  {
+    icon: Realme,
     tag: "Realme",
   },
 ];
-
