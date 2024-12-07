@@ -7,25 +7,29 @@ const Header = () => {
 
   return (
     <header
-      className={`flex justify-between p-4 bg-white text-black dark:bg-red-800 dark:text-white`}
+      className={`fixed top-0 left-0 z-50 w-full flex justify-between p-4   text-black   dark:text-white`}
     >
       <div>
         {" "}
-        <h1 className="text-xl">Header</h1>
+        <h1 className="text-xl">Logo</h1>
       </div>
-      <div className="flex">
-        <div className="home">Home</div>
-        <div className="home">Home</div>
-        <div className="home">Home</div>
-        <div className="home">Home</div>
+      <div className="flex space-x-4">
+        <div className="home">Samsung</div>
+        <div className="home">Apple</div>
+        <div className="home">Vivo</div>
+        <div className="home">Oppo</div>
+        <div className="home">Xiaomi</div>
+        <div className="home">Realme</div>
       </div>
-      <div>
+      <div className="flex space-x-4">
         <button
           onClick={toggleTheme}
           className={` bg-gray-200 text-black dark:bg-gray-600 dark:text-white`}
         >
           {isDarkMode ? "Light" : "Dark"}
         </button>
+        <div>help</div>
+        <div>Add to</div>
       </div>
     </header>
   );
