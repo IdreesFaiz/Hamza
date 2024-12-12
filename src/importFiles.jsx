@@ -11,9 +11,19 @@ import M1 from "./assets/M1.png";
 import M2 from "./assets/M2.png";
 import M3 from "./assets/M3.png";
 import M4 from "./assets/M4.png";
+import WbSunnyIcon from "@mui/icons-material/WbSunny";
+import BedtimeIcon from "@mui/icons-material/Bedtime";
+import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 
 export const Front_Img = FrontImg;
 
+export const HEADER_ICON = [
+  <WbSunnyIcon style={{ color: "#fff1dc" }} />,
+  <BedtimeIcon style={{ color: "#fff1dc" }} />,
+  <SupportAgentIcon style={{ color: "#fff1dc" }} />,
+  <ShoppingCartIcon style={{ color: "#fff1dc" }} />,
+];
 export const Front_Rotate = [
   {
     M_1: M1,
@@ -69,7 +79,6 @@ export const SATISFY_DATA = [
     para: "",
   },
 ];
-
 
 export const BRAND_DATA = [
   {
