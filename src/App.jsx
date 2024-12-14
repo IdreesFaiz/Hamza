@@ -8,6 +8,8 @@ import Satisfy from "./components/satisfy";
 import Brand from "./components/brand";
 import Complain from "./components/complain";
 import Samsung from "./components/samsung";
+import Latest from "./components/Latest";
+import LatestGrid from "./globle/LatestGrid";
 
 const App = () => {
   return (
@@ -15,6 +17,8 @@ const App = () => {
       <Header />
       <FrontPage />
       <Satisfy />
+      <LatestGrid/>
+      <Latest/>
       <Complain/>
       <Samsung />
       <Brand />
