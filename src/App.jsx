@@ -16,11 +16,9 @@ const App = () => {
     <ThemeProvider>
       <Header />
       <FrontPage />
-      <Satisfy />
-      <LatestGrid/>
-      <Latest/>
+     
       <Complain/>
-      <Samsung />
+     
       <Brand />
       <Footer />
     </ThemeProvider>

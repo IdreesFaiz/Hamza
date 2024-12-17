@@ -3,7 +3,7 @@ import ims from "../assets/M4.png";
 
 // import BoxDesign from "../globle/boxDesign";
 import LatestGrid from "../globle/LatestGrid";
-const Samsung = () => {
+const Oppo = () => {
   const Products = [
     {
       id: 1,
@@ -50,16 +50,15 @@ const Samsung = () => {
       name: "Samsung",
       buyProduct: "Buy",
     },
-    
   ];
   return (
     <div>
       <div className="flex justify-between">
-        <h1>Samsung</h1>
+        <h1>Oppo</h1>
         <button>View all</button>
       </div>
       <LatestGrid Products={Products} />
     </div>
   );
 };
-export default Samsung;
+export default Oppo;
