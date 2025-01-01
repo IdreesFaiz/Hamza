@@ -2,6 +2,7 @@ import { Front_Img, FRONT_CIRCLE, Front_Rotate } from "../importFiles";
 import watch from "../assets/product.png";
 import { useState } from "react";
 import { useEffect } from "react";
+import Samsung from "./samsung";
 
 const FrontPage = () => {
  
@@ -14,6 +15,7 @@ const FrontPage = () => {
         <SectionImg/>
         <SectionRotate/>
       </div>
+      <Samsung/>
     </>
   );
 };
