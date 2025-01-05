@@ -1,118 +1,135 @@
-import { Front_Img, FRONT_CIRCLE, Front_Rotate } from "../importFiles";
-import watch from "../assets/product.png";
-import { useState } from "react";
 import { useEffect } from "react";
+import watch from "../assets/product.png";
 import Samsung from "./samsung";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+// Register ScrollTrigger with GSAP
+gsap.registerPlugin(ScrollTrigger);
 
 const FrontPage = () => {
- 
   return (
     <>
       <div
-        className={` bg-[#82B2F0] text-black dark:bg-[#162544] dark:text-white w-full h-[100vh]
-            flex justify-between`}
+        className={`pb-56 bg-[#82B2F0] text-black dark:bg-[#162544] dark:text-white w-full h-[140vh] flex justify-center items-end`}
       >
-        <SectionImg/>
-        <SectionRotate/>
+        <Animation />
       </div>
-      <Samsung/>
+      <Samsung />
     </>
   );
 };
+
 export default FrontPage;
 
+function Animation() {
+  useEffect(() => {
+    gsap.to(".scroll-element", {
+       width: "208px",
+       height: "224",
+      x: "-380px",
+      y: "20px",
+      marginTop: "80px",
+      scrollTrigger: {
+        trigger: ".scroll-element",
+        start: "60% 80%",
+        end: "40% 65%",
+        scrub: true,
+        markers: true,
+      },
+    });
+    gsap.to(".scroll-element1", {
+      width: "208px",
+      height: "224",
+      x: "380px",
+      y: "20px",
+      scrollTrigger: {
+        trigger: ".scroll-element1",
+        start: "60% 80%",
+        end: "40% 65%",
+        scrub: true,
+        markers: true,
+      },
+    });
 
+    gsap.to(".scroll-element2", {
+      width: "208px",
+      height: "224",
+      x: "230px",
+      y: "-10px",
 
-function SectionImg(){
- return (
-   <div className="section-1 w-full sm:w-[60%] md:w-[50%] lg:w-[40%]">
-     <div className="relative h-[70vh] sm:h-[80vh] md:h-[92vh]">
-       <div className="absolute top-0 left-0 w-full h-full">
-         <img
-           src={Front_Img}
-           className="w-full h-full object-cover"
-           alt="Background"
-         />
-       </div>
+      scrollTrigger: {
+        trigger: ".scroll-element2",
+        start: "60% 80%",
+        end: "40% 65%",
+        scrub: true,
+        markers: true,
+      },
+    });
+    gsap.to(".scroll-element3", {
+      width: "208px",
+      height: "224",
+      x: "-230px",
+      y: "-10px",
 
-       <div className="absolute top-0 left-0 w-full h-full flex flex-col justify-center  px-4">
-         <div className="mt-14">
-           <h1 className="text-[50px] font-sans font-semibold text-white">
-             Market Mind
-           </h1>
-           <h4 className="text-white text-wrap max-w-[400px] word-break break-words pb-4">
-             Discover the latest mobiles, crafted to complement your lifestyle.
-             Enjoy cutting-edge technology, sleek designs, and powerful features
-             — all tailored just for you. Shop now and pay later with flexible
-             payment options!
-           </h4>
-         </div>
+      scrollTrigger: {
+        trigger: ".scroll-element3",
+        start: "60% 80%",
+        end: "40% 65%",
+        scrub: true,
+        markers: true,
+      },
+    });
+    gsap.to(".scroll-element4", {
+      width: "208px",
+      height: "224",
+      x: "70px",
+      y: "-35px",
 
-         {/* Circle Images */}
-         <div className="flex">
-           {FRONT_CIRCLE?.map((data, index) => (
-             <div key={index} className="w-28 h-28  ">
-               <img
-                 src={data?.img}
-                 className="w-full h-full object-contain"
-                 alt={`Circle ${index + 1}`}
-               />
-             </div>
-           ))}
-         </div>
-       </div>
-     </div>
-   </div>
- );
+      scrollTrigger: {
+        trigger: ".scroll-element4",
+        start: "60% 80%",
+        end: "40% 65%",
+        scrub: true,
+        markers: true,
+      },
+    });
+    gsap.to(".scroll-element5", {
+      width: "208px",
+      height: "224",
+      x: "-70px",
+      y: "-30px",
+      scrollTrigger: {
+        trigger: ".scroll-element5",
+        start: "60% 80%",
+        end: "40% 65%",
+        scrub: true,
+        markers: true,
+      },
+    });
+  }, []);
 
-}
-
-
-function SectionRotate(){
-   const [rotation, setRotation] = useState(0);
-
-   useEffect(() => {
-     const interval = setInterval(() => {
-       setRotation((prev) => prev - 90);
-     }, 3000);
-
-     return () => clearInterval(interval);
-   }, []);
   return (
-    <div className="w-[60%] flex items-end justify-end  overflow-hidden ">
-      <div className="relative">
-        <div
-          className={`absolute  w-[60vw] h-[60vw]  bg-[#5784C5] dark:bg-[#233a66] rounded-full transition-transform duration-500`}
-          style={{
-            transform: `rotate(${rotation}deg)`,
-            bottom: "-92vh",
-            right: "-12vw",
-          }}
-        >
-          <div className="relative flex flex-col items-center justify-center h-full">
-            <div className="absolute w-[35vw] top-[-250px] 2xl:top-[-250px] animate-topBottom">
-              <img src={Front_Rotate[0]?.M_1} alt="" />
-            </div>
-            <div className="absolute w-[35vw]  bottom-[-250px] 2xl:bottom-[-250px] animate-topBottom">
-              <img src={Front_Rotate[1]?.M_2} alt="" className="rotate-180" />
-            </div>
-            <div className="absolute w-[35vw] left-[-250px] 2xl:left-[-250px] animate-leftRight">
-              <img
-                src={Front_Rotate[2]?.M_3}
-                alt=""
-                className="rotate-[-90deg]"
-              />
-            </div>
-            <div className="absolute w-[35vw] right-[-250px] 2xl:right-[-250px] animate-leftRight">
-              <img
-                src={Front_Rotate[3]?.M_4}
-                alt=""
-                className="rotate-[90deg]"
-              />
-            </div>
-          </div>
-        </div>
+    <>
+      <div className="absolute w-28 h-36 m-1 rotate-[10deg] rounded-md py-3 bg-blue-600 scroll-element1">
+        <img src={watch} className="w-full h-full object-contain" alt="" />
       </div>
-    </div>
+      <div className="absolute w-28 h-36 rotate-[5deg] m-1 rounded-md py-3 bg-red-600 scroll-element2">
+        <img src={watch} className="w-full h-full object-contain" alt="" />
+      </div>
+      <div className="absolute w-28 h-36 m-1 rotate-[5deg] rounded-md py-3 bg-yellow-600 scroll-element4">
+        <img src={watch} className="w-full h-full object-contain" alt="" />
+      </div>
+      <div className="absolute w-28 h-36 m-1 -rotate-[2deg] rounded-md py-3 bg-red-600 scroll-element5">
+        <img src={watch} className="w-full h-full object-contain" alt="" />
+      </div>
+      <div className="absolute w-28 h-36 m-1 -rotate-[5deg] rounded-md py-3 bg-green-600 scroll-element3">
+        <img src={watch} className="w-full h-full object-contain" alt="" />
+      </div>
+      {/* The scroll-element with the animation applied */}
+      <div className="absolute w-28 h-36 m-1 -rotate-[5deg] rounded-md py-3 bg-blue-600 scroll-element">
+        <img src={watch} className="w-full h-full object-contain" alt="Watch" />
+      </div>
+    </>
   );
 }
