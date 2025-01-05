@@ -14,6 +14,7 @@ const FrontPage = () => {
         className={`pb-56 bg-[#82B2F0] text-black dark:bg-[#162544] dark:text-white w-full h-[140vh] flex justify-center items-end`}
       >
         <Animation />
+        //sfd
       </div>
       <Samsung />
     </>
