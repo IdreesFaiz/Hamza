@@ -2,3 +2,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.scroll-container {
+  position: relative;
+  overflow: hidden; /* Restrict overflow */
+  width: 100%; /* Match viewport width */
+  height: 100vh; /* Match viewport height */
+}
