@@ -14,7 +14,7 @@ const FrontPage = () => {
         className={`pb-56 bg-[#82B2F0] text-black dark:bg-[#162544] dark:text-white w-full h-[140vh] flex justify-center items-end`}
       >
         <Animation />
-        //sfd
+        
       </div>
       <Samsung />
     </>
@@ -26,84 +26,84 @@ export default FrontPage;
 function Animation() {
   useEffect(() => {
     gsap.to(".scroll-element", {
-       width: "208px",
-       height: "224",
+      width: "168px",
+      height: "188",
       x: "-380px",
       y: "20px",
       marginTop: "80px",
       scrollTrigger: {
         trigger: ".scroll-element",
         start: "60% 80%",
-        end: "40% 65%",
+        end: "40% 55%",
         scrub: true,
         markers: true,
       },
     });
     gsap.to(".scroll-element1", {
-      width: "208px",
-      height: "224",
+      width: "168px",
+      height: "188",
       x: "380px",
       y: "20px",
       scrollTrigger: {
         trigger: ".scroll-element1",
         start: "60% 80%",
-        end: "40% 65%",
+        end: "40% 55%",
         scrub: true,
         markers: true,
       },
     });
 
     gsap.to(".scroll-element2", {
-      width: "208px",
-      height: "224",
+      width: "168px",
+      height: "188",
       x: "230px",
       y: "-10px",
 
       scrollTrigger: {
         trigger: ".scroll-element2",
         start: "60% 80%",
-        end: "40% 65%",
+        end: "40% 55%",
         scrub: true,
         markers: true,
       },
     });
     gsap.to(".scroll-element3", {
-      width: "208px",
-      height: "224",
+      width: "168px",
+      height: "188",
       x: "-230px",
       y: "-10px",
 
       scrollTrigger: {
         trigger: ".scroll-element3",
         start: "60% 80%",
-        end: "40% 65%",
+        end: "40% 55%",
         scrub: true,
         markers: true,
       },
     });
     gsap.to(".scroll-element4", {
-      width: "208px",
-      height: "224",
+      width: "168px",
+      height: "188",
       x: "70px",
       y: "-35px",
 
       scrollTrigger: {
         trigger: ".scroll-element4",
         start: "60% 80%",
-        end: "40% 65%",
+        end: "40% 55%",
         scrub: true,
         markers: true,
       },
     });
     gsap.to(".scroll-element5", {
-      width: "208px",
-      height: "224",
+      width: "168px",
+      height: "188",
       x: "-70px",
       y: "-30px",
       scrollTrigger: {
         trigger: ".scroll-element5",
         start: "60% 80%",
-        end: "40% 65%",
+        end: "40% 55%",
         scrub: true,
         markers: true,
       },
@@ -115,7 +115,7 @@ function Animation() {
       <div className="absolute w-28 h-36 m-1 rotate-[10deg] rounded-md py-3 bg-blue-600 scroll-element1">
         <img src={watch} className="w-full h-full object-contain" alt="" />
       </div>
-      <div className="absolute w-28 h-36 rotate-[5deg] m-1 rounded-md py-3 bg-red-600 scroll-element2">
+      <div className="absolute w-28 h-36 rotate-[8deg] m-1 rounded-md py-3 bg-red-600 scroll-element2">
         <img src={watch} className="w-full h-full object-contain" alt="" />
       </div>
       <div className="absolute w-28 h-36 m-1 rotate-[5deg] rounded-md py-3 bg-yellow-600 scroll-element4">
