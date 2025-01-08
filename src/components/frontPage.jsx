@@ -39,20 +39,7 @@ function Animation() {
         // markers: true,
       },
     });
-    gsap.to(".card-overflow1", {
-      y: "300px",
-      marginLeft: "-250px",
-      rotate: "0deg",
-      marginTop: "80px",
-      scrollTrigger: {
-        trigger: ".card-overflow1",
-        start: "60% 60%",
-        end: "40% 35%",
-        scrub: true,
-      
-        // markers: true,
-      },
-    });
+ 
 
     ///////////////////////////
     gsap.to(".card2", {
@@ -69,20 +56,7 @@ function Animation() {
         // markers: true,
       },
     });
-       gsap.to(".card-overflow2", {
-         y: "300px",
-         marginLeft: "550px",
-         rotate: "0deg",
-         marginTop: "80px",
-         scrollTrigger: {
-           trigger: ".card-overflow2",
-           start: "60% 60%",
-           end: "40% 35%",
-           scrub: true,
-         
-           markers: true,
-         },
-       });
+      
   }, []);
 
 
@@ -91,7 +65,7 @@ function Animation() {
       <div className="absolute w-28 h-36 m-1 -rotate-[5deg] rounded-md py-3 bg-blue-600 card-1 card-overflow1">
         <img src={watch} className="w-full h-full object-contain" alt="Watch" />
       </div>
-      <div className="absolute w-28 h-36 rotate-[5deg] m-1 rounded-md py-3 bg-red-600 card2 card-overflow2">
+      <div className="absolute w-28 h-36 rotate-[5deg] m-1 rounded-md py-3 bg-red-600 card2 ">
         <img src={watch} className="w-full h-full object-contain" alt="" />
       </div>
         {/* <div className="absolute w-28 h-36 m-1 rotate-[10deg] rounded-md py-3 bg-blue-600 scroll-element1 scroll">
