@@ -11,7 +11,7 @@ const FrontPage = () => {
   return (
     <>
       <div
-        className={`pb-56 bg-[#82B2F0] text-black dark:bg-[#162544] dark:text-white w-full h-[140vh] flex justify-center items-end`}
+        className={`  text-black dark:bg-[#162544] dark:text-white w-full h-screen flex justify-center `}
       >
         <Animation />
       </div>
@@ -24,112 +24,104 @@ export default FrontPage;
 
 function Animation() {
   useEffect(() => {
+    gsap.fromTo(
+      ".animate-item",
+      {
+        y: "30%",
+      },
+      {
+        y: "-30%",
+        duration: 1.5,
+        ease: "power2.out",
+      }
+    );
     gsap.to(".scroll-element", {
-      width: "168px",
-      height: "188",
+      width: "148px",
+      height: "178px",
       x: "-380px",
       y: "20px",
       marginTop: "80px",
-      scrollTrigger: {
-        trigger: ".scroll-element",
-        start: "60% 80%",
-        end: "40% 55%",
-        scrub: true,
-        markers: true,
-      },
+      duration: 1,
+        delay: 1.5,
     });
+
     gsap.to(".scroll-element1", {
-      width: "168px",
-      height: "188",
+      width: "148px",
+      height: "178px",
       x: "380px",
       y: "20px",
-      scrollTrigger: {
-        trigger: ".scroll-element1",
-        start: "60% 80%",
-        end: "40% 55%",
-        scrub: true,
-        markers: true,
-      },
+      duration: 1,
+      delay: 1.5,
     });
 
     gsap.to(".scroll-element2", {
-      width: "168px",
-      height: "188",
-      x: "230px",
+      width: "148px",
+      height: "178px",
+      x: "260px",
       y: "-10px",
-
-      scrollTrigger: {
-        trigger: ".scroll-element2",
-        start: "60% 80%",
-        end: "40% 55%",
-        scrub: true,
-        markers: true,
-      },
+      duration: 1,
+      delay: 1.5,
     });
-    gsap.to(".scroll-element3", {
-      width: "168px",
-      height: "188",
-      x: "-230px",
-      y: "-10px",
 
-      scrollTrigger: {
-        trigger: ".scroll-element3",
-        start: "60% 80%",
-        end: "40% 55%",
-        scrub: true,
-        markers: true,
-      },
+    gsap.to(".scroll-element3", {
+      width: "148px",
+      height: "178px",
+      x: "-260px",
+      y: "-10px",
+      duration: 1,
+      delay: 1.5,
+    });
+    gsap.to(".scroll-element6", {
+      width: "148px",
+      height: "178px",
+      x: "0px",
+      y: "-45px",
+      duration: 1,
+      delay: 1.5,
     });
     gsap.to(".scroll-element4", {
-      width: "168px",
-      height: "188",
-      x: "70px",
+      width: "148px",
+      height: "178px",
+      x: "130px",
       y: "-35px",
+      duration: 1,
+      delay: 1.5,
+    });
 
-      scrollTrigger: {
-        trigger: ".scroll-element4",
-        start: "60% 80%",
-        end: "40% 55%",
-        scrub: true,
-        markers: true,
-      },
-    });
     gsap.to(".scroll-element5", {
-      width: "168px",
-      height: "188",
-      x: "-70px",
-      y: "-30px",
-      scrollTrigger: {
-        trigger: ".scroll-element5",
-        start: "60% 80%",
-        end: "40% 55%",
-        scrub: true,
-        markers: true,
-      },
+      width: "148px",
+      height: "178px",
+      x: "-130px",
+      y: "-35px",
+      duration: 1,
+      delay: 1.5,
     });
+
   }, []);
 
   return (
-    <>
-      <div className="absolute w-28 h-36 m-1 rotate-[10deg] rounded-md py-3 bg-blue-600 scroll-element1">
+    <div className="relative   w-full h-screen flex justify-center items-end animate-item">
+      <div className="absolute w-28 h-36  rounded-md py-3  rotate-[10deg] bg-blue-600 scroll-element1">
         <img src={watch} className="w-full h-full object-contain" alt="" />
       </div>
-      <div className="absolute w-28 h-36 rotate-[8deg] m-1 rounded-md py-3 bg-red-600 scroll-element2">
+      <div className="absolute w-28 h-36  rounded-md py-3  rotate-[7deg] bg-red-600 scroll-element2">
         <img src={watch} className="w-full h-full object-contain" alt="" />
       </div>
-      <div className="absolute w-28 h-36 m-1 rotate-[5deg] rounded-md py-3 bg-yellow-600 scroll-element4">
+      <div className="absolute w-28 h-36  rounded-md py-3  rotate-[5deg] bg-green-600 scroll-element4">
         <img src={watch} className="w-full h-full object-contain" alt="" />
       </div>
-      <div className="absolute w-28 h-36 m-1 -rotate-[2deg] rounded-md py-3 bg-red-600 scroll-element5">
+      <div className="absolute w-28 h-36  rounded-md py-3 bg-pink-600 scroll-element6">
         <img src={watch} className="w-full h-full object-contain" alt="" />
       </div>
-      <div className="absolute w-28 h-36 m-1 -rotate-[5deg] rounded-md py-3 bg-green-600 scroll-element3">
+      <div className="absolute w-28 h-36   rounded-md py-3  -rotate-[5deg] bg-green-600 scroll-element5">
         <img src={watch} className="w-full h-full object-contain" alt="" />
       </div>
-      {/* The scroll-element with the animation applied */}
-      <div className="absolute w-28 h-36 m-1 -rotate-[5deg] rounded-md py-3 bg-blue-600 scroll-element">
+      <div className="absolute w-28 h-36   rounded-md py-3  -rotate-[7deg] bg-red-600 scroll-element3">
+        <img src={watch} className="w-full h-full object-contain" alt="" />
+      </div>
+      <div className="absolute w-28 h-36   rounded-md py-3 -rotate-[10deg] bg-blue-600 scroll-element">
         <img src={watch} className="w-full h-full object-contain" alt="Watch" />
       </div>
-    </>
+    </div>
   );
 }
